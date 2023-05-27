@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+}
+
+.App {
+    font-size: 1.5rem;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: #555;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: fit-content;
+    padding: 1rem;
+    background-color: #777;
+}
+.Header {
+    text-align: center;
+}
+
+.Display {
+    max-width: 70vw;
+    min-width: 70vw;
+    min-height: 8rem;
+    background-color: #fff;
+    margin-top: 2rem;
+    border-radius: 8px;
+    text-align: right;
+    padding: 15px;
+    display: grid;
+}
+.finalResult {
+    height: 100%;
+    color: navy;
+    overflow: scroll;
+}
+
+.result {
+    width: calc(70vw - 30px);
+    padding-right: 1rem;
+    height: 1rem;
+}
+
+.operator::before {
+    content: " ";
+    height: 1rem;
+}
+
+.operator {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.calc {
+    width: calc(70vw - 30px);
+    padding-right: 1rem;
+    height: 1rem;
+    word-wrap: break-word;
+}
+
+.btnContainer {
+    height: 300px;
+    background-color: lightgrey;
+    width: 70vw;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas:
+        "ac delete delete times"
+        "seven eight nine divide"
+        "four five six minus"
+        "one two three plus"
+        "dot zero equal equal";
+}
+
+.delete {
+    grid-area: delete;
+}
+
+.times {
+    grid-area: times;
+}
+
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.divide {
+    grid-area: divide;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.minus {
+    grid-area: minus;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.plus {
+    grid-area: plus;
+}
+.dot {
+    grid-area: dot;
+    height: 3em;
+}
+.zero {
+    grid-area: zero;
+}
+.equal {
+    grid-area: equal;
+}
+
+.btn {
+    height: 100%;
+    padding: 4px;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disable {
+    background-color: rgb(63, 62, 62);
+}
