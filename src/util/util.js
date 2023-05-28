@@ -3,7 +3,7 @@ export const setComa = (txt) => {
         let arr = txt.split(".");
         let num = arr[0].split("");
         for (let i = num.length - 1; i >= 0; i -= 3) {
-            if (i !== num.length - 1) {
+            if (i !== num.length - 1 && num[i] != "-") {
                 num[i] += ",";
             }
         }
@@ -14,7 +14,7 @@ export const setComa = (txt) => {
     } else {
         let num = txt.split("");
         for (let i = num.length - 1; i >= 0; i -= 3) {
-            if (i !== num.length - 1) {
+            if (i !== num.length - 1 && num[i] != "-") {
                 num[i] += ",";
             }
         }

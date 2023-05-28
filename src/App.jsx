@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Button from "./Button";
+import Footer from "./Footer";
 import { useState } from "react";
 function App() {
     const [resultOnEqual, setResultOnEqual] = useState("");
@@ -12,6 +13,7 @@ function App() {
                     resultOnEqual={setResultOnEqual}
                 />
             </main>
+            <Footer />
         </div>
     );
 }
