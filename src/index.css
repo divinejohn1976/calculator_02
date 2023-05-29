@@ -178,6 +178,9 @@ footer {
 
 footer p {
     text-align: center;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-size: 1.2rem;
 }
 
 @media only screen and (orientation: landscape) {
