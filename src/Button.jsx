@@ -381,7 +381,7 @@ const Button = ({ resultOnEqual, setResultOnEqual }) => {
                 onClick={handleEqual}
                 className="btn equal"
             >
-                =
+                <a href="#finalResult">=</a>
             </button>
             <button
                 onClick={handleAdd}

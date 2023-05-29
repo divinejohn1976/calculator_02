@@ -27,6 +27,7 @@ const Display = ({ resultOnEqual }) => {
                                 : "3rem"
                     }}
                     className="finalResult"
+                    id="finalResult"
                 >
                     {showResultOnEqual}
                 </div>
