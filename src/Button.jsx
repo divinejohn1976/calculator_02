@@ -203,6 +203,12 @@ const Button = ({ resultOnEqual, setResultOnEqual }) => {
         let rightOperand = 0;
         let divide = 0;
 
+        if (calc === "0") {
+            setResult("sorry, zero can't divide");
+            setTimeout(handleAc, 1500);
+            return;
+        }
+
         if (calc) {
             if (calc.split(".").length === 1) {
                 rightOperand = Number.parseInt(calc);
