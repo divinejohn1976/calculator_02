@@ -1,24 +1,22 @@
-export const setComa = (txt) => {
-    if (txt.includes(".")) {
-        let arr = txt.split(".");
-        let num = arr[0].split("");
-        for (let i = num.length - 1; i >= 0; i -= 3) {
-            if (i !== num.length - 1 && num[i] != "-") {
-                num[i] += ",";
-            }
-        }
-        let numJoined = num.join("");
-        arr[0] = numJoined;
-        let allJoined = arr.join(".");
-        return allJoined;
-    } else {
-        let num = txt.split("");
-        for (let i = num.length - 1; i >= 0; i -= 3) {
-            if (i !== num.length - 1 && num[i] != "-" && Number(num[i])) {
-                num[i] += ",";
-            }
-        }
-        let joined = num.join("");
-        return joined;
-    }
+export const setComa = (number) => {
+	const strNumber = number.toString(); // Convert the number to a string
+	const parts = strNumber.split("."); // Split the number into integer and decimal parts
+	const integerPart = parts[0];
+	const decimalPart = parts.length > 1 ? "." + parts[1] : "";
+
+	let formattedInteger = "";
+	let count = 0;
+
+	// Iterate through each character of the integer part in reverse order
+	for (let i = integerPart.length - 1; i >= 0; i--) {
+		formattedInteger = integerPart[i] + formattedInteger;
+		count++;
+
+		// Add a comma after every 3 characters (except for the last one)
+		if (count % 3 === 0 && i !== 0) {
+			formattedInteger = "," + formattedInteger;
+		}
+	}
+
+	return formattedInteger + decimalPart;
 };
